@@ -35,18 +35,12 @@ require_once __DIR__ . '/includes/classes.php';
 require __DIR__ . '/includes/routes.php';
 require __DIR__ . '/includes/ajax.php';
 
-// Initialize the router for Admin Dashboard
-require __DIR__ . '/includes/admin-routes.php';
-require __DIR__ . '/includes/admin-ajax.php';
-
 // Client Log
 $clientController->logClient();
 $clientController->onlineClients();
 
 // TODO: Remove online client -> to cronjob
 $clientController->deleteOnlineClient();
-
-// TODO: Cronjob -> clear cart after 12 hours inactivity if not ordered
 
 /**
  * Page not found handler
